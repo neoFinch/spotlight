@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>App Launcher</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: white;
+      overflow: hidden;
+
+    }
+
+    #app {
+      padding: 16px;
+      border-radius: 16px;
+      background-color: rgba(0, 0, 0, 0.95);
+      overflow: hidden;
+      backdrop-filter: blur(5px);
+    }
+    #search {
+      width: calc(100% - 20px);
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    #results {
+      margin-top: 10px;
+      max-height: 200px;
+      overflow: auto;
+      padding: 16px 0;
+    }
+
+    .app-item {
+      padding: 5px;
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .app-item:focus {
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.1);
+
+    }
+
+    #search:focus {
+      outline: border 1px solid white;
+      border: 2px solid white;
+    }
+
+    .app-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .app-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 5px;
+      border-radius: 4px;
+    }
+
+    .app-icon-placeholder {
+      width: 32px;
+      height: 32px;
+      margin-right: 5px;
+      border-radius: 4px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+  <input class="app-item" type="text" id="search" placeholder="Search for an app...">
+  <div id="results"></div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+
+</html>
